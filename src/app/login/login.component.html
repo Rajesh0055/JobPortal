@@ -1,0 +1,37 @@
+<div class="container">
+  <div id="login-container"  align="center">
+
+    <mat-card class="example-card" >
+      <mat-card-header  style="text-align: center;">
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Login to your Account</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="https://t3.ftcdn.net/jpg/03/70/92/84/360_F_370928450_R6g8c0j5cey86PUXE32W7KMiqIUe1fOI.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <br/>
+        <div [formGroup]="loginForm">
+        <div  align="left" >
+        <mat-form-field appearance="outline" class="col-12">
+          <mat-label>UserName</mat-label>
+          <input matInput placeholder="UserName" formControlName="username">
+        </mat-form-field>
+        </div>
+        <div  align="left">
+          <mat-form-field appearance="outline" class="col-12">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password"  type="password" formControlName="userpassword">
+          </mat-form-field>
+          </div>
+          <div align="left">
+            <button mat-flat-button color="primary"  [disabled]="!loginForm.valid" (click)="login()">Sign In</button>
+          </div>
+          <div>
+          </div>
+          </div>
+      </mat-card-content>
+     
+    </mat-card>
+    
+      
+  </div>
+</div>

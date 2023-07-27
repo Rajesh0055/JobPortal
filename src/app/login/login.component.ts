@@ -16,12 +16,7 @@ export class LoginComponent {
     constructor(
       private formBuilder: FormBuilder,
       private router: Router) { 
-        // this.loginForm = new FormGroup({
-        //   // username: new FormControl('',Validators.required),
-        //   // userpassword: new FormControl('',Validators.required)
-        //   'userName':['',Validators.required],
-
-        // });
+        
 
         this.loginForm = this.formBuilder.group({
           username: ['', [Validators.required,Validators.email]],
